@@ -54,7 +54,7 @@ PHASE THREE
 
 ## Current Application Screenshots
 
-![Landing Page](/client/public/images/landing.PNG)
+![Landing Page](/client/public/images/landing.PNG?raw=true)
 ![Add New Project Page](/client/public/images/projectAdd.PNG)
 ![Add Parts Page](/client/public/images/addParts.PNG)
 ![Stock Report Page](/client/public/images/stockReport.PNG)
