@@ -57,7 +57,7 @@ PHASE THREE
 
 ## Demo
 
-_Inventory-mgmt_ is deployed to Heroku. Please check it out [here](https://).
+_Inventory-mgmt_ is deployed to Heroku. Please check it out [here](https://inventory-mgmt-ead.herokuapp.com/).
 
 - What is the direct link to the project? Quick start options:
   - The code is hosted here: [inventory-mgmt](https://nicolejeanne.github.io/inventory-mgmt/).
