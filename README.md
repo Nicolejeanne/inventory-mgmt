@@ -8,21 +8,22 @@ My department at my current job uses a web-based inventory management system to 
 
 ## Tech Stack
 
-MERN Stack
+- MERN Stack
 
-- MongoDB
-  - Mongoose
-- Express.js
-- React.js
-- Node.js
+  - MongoDB
+    - Mongoose
+  - Express.js
+  - React.js
+  - Node.js
 
-HTML5
-CSS3
-Bootstrap
-Javascript
-Moment.js
-Temporarily dpeloyed with Heroku
-Yarn
+- HTML5
+- CSS3
+- Bootstrap
+- Javascript
+- Moment.js
+- Temporarily dpeloyed with Heroku
+- Yarn
+- Figma
 
 ## Project Organization
 
