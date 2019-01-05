@@ -62,7 +62,10 @@ PHASE THREE
 
 ## Wireframe
 
-![Initial Wireframe](/public/images/ "Wireframe")
+![Add Parts Wireframe](./client/public/images/newAddParts.png?raw=true)
+![Get Parts Wireframe](./client/public/images/newGetParts.png?raw=true)
+![Search Parts Wireframe](./client/public/images/newSearchParts.png?raw=true)
+![Search Parts Results Wireframe](./client/public/images/newSearchResults.png?raw=true)
 
 ## Demo
 
