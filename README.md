@@ -67,6 +67,12 @@ PHASE THREE
 ![Search Parts Wireframe](./client/public/images/newSearchParts.png?raw=true)
 ![Search Parts Results Wireframe](./client/public/images/newSearchResults.png?raw=true)
 
+## App Flow
+
+This is the basic intended flow off the app.
+
+![Search Parts Results Wireframe](./client/public/images/appFlow.png?raw=true)
+
 ## Demo
 
 _Inventory-mgmt_ is deployed to Heroku. Please check it out [here](https://inventory-mgmt-ead.herokuapp.com/).
