@@ -1,12 +1,12 @@
 import React from "react";
-import Books from "./pages/Books";
 import Nav from "./components/Nav";
+// import SideMenu from "./components/SideMenu";
 
 function App() {
   return (
     <div>
       <Nav />
-      <Books />
+      {/* <SideMenu/> */}
     </div>
   );
 }
