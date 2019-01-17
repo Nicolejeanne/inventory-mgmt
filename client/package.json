@@ -4,11 +4,12 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "^2.1.1",
     "react-router-dom": "^4.3.1",
-    "axios": "^0.18.0"
+    "react-scripts": "^2.1.3",
+    "react-sidemenu": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
