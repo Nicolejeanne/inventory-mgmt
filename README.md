@@ -10,8 +10,8 @@ My department at my current job uses a web-based inventory management system to 
 
 - MERN Stack
 
-  - MongoDB
-    - Mongoose
+  - mySQL
+    - Sequelize
   - Express.js
   - React.js
   - Node.js
@@ -22,10 +22,8 @@ My department at my current job uses a web-based inventory management system to 
 - Javascript
 - Moment.js
 - Temporarily deployed with Heroku
-- Yarn
+- NPM
 - Moqups
-- Jest
-- Enzyme
 
 ## Project Organization
 
