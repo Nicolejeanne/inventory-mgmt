@@ -1,52 +1,67 @@
-module.exports = function(sequelize, Datatypes) {
+module.exports = function(sequelize, DataTypes) {
   var PartEntry = sequelize.define("PartEntry", {
     orderType: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100]
       }
     },
     orderNumber: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 50]
       }
     },
-    partNumber: {
-      type: Datatypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 100]
-      }
-    },
-    partType: {
-      type: Datatypes.STRING,
+    vendor: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 50]
       }
     },
-    partDescription: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    manufacturer: {
-      type: Datatypes.STRING,
+    quantity: {
+      type: DataTypes.INT,
       allowNull: false,
       validate: {
-        len: [1, 100]
+        len: [1, 10]
       }
     },
-    unitType: {
-      type: Datatypes.STRING,
+    room: {
+      type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [1, 10]
+      }
+    },
+    cabinet: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 10]
+      }
+    },
+    bin: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 10]
+      }
+    },
+    package: {
+      type: DataTypes.INT,
+      allowNull: false,
+    // add auto_increment
       validate: {
         len: [1, 10]
       }
     }
   });
 
-  return PartDefinition;
+// PartEntry.associate = function(models) {
+//   PartEntry.belongsTo(models.PartDefinition, {as})
+// }
+
+  return PartEntry;
 };

@@ -8,9 +8,9 @@ My department at my current job uses a web-based inventory management system to 
 
 ## Tech Stack
 
-- MERN Stack
+- MERN Stack (without MongoDB...so not REALLY MERN)
 
-  - mySQL
+  - MySQL
     - Sequelize
   - Express.js
   - React.js
