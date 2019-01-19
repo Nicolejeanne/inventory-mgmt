@@ -40,3 +40,4 @@ CREATE TABLE partEntry (
     REFERENCES partDefinition(part_id),
     PRIMARY KEY (partEntry_id)
 );
+-- erd

@@ -7,13 +7,6 @@ partNumber: {
         len: [1, 100]
     }
 },
-partRevision: {
-    type: Datatypes.STRING,
-    allowNull: true,
-    validate: {
-        len: [1, 5]
-    }
-},
 partType: {
     type: Datatypes.STRING,
     allowNull: false,
@@ -30,13 +23,6 @@ manufacturer: {
     allowNull: false,
     validate: {
         len: [1, 100]
-    }
-},
-unitType: {
-    type: Datatypes.STRING,
-    allowNull: false,
-    validate: {
-        len: [1, 10]
     }
 }
 });
