@@ -26,6 +26,11 @@ manufacturer: {
     }
 }
 });
+PartDefinition.associate = models => {
+    PartDefinition.hasMany(models.PartEntry, {
+        foreignKey: 'partDefinitionId'
+    })
+}
 
 return PartDefinition;
 };

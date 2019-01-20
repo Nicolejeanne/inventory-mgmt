@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var order = sequelize.define("order", {
+  var Order = sequelize.define("Order", {
     orderType: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,5 +22,14 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return order;
+
+  Order.associate = models => {
+    Order.hasMany(models.PartEntry, {
+      foreignKey: "orderId"
+    });
+    Order.hasOne(models.Vendor, {
+      foreignKey: "vendorId"
+    });
+  };
+  return Order;
 };
