@@ -2,42 +2,40 @@ CREATE DATABASE partsInventory_db;
 
 USE partsInventory_db;
 
-CREATE TABLE partDefinition (
-    part_id INT NOT NULL AUTO_INCREMENT,
-    partNumber VARCHAR(100) NOT NULL,
-    partRevision VARCHAR(5),
-    partType VARCHAR(50) NOT NULL,
-    partDescription TEXT NOT NULL,
-    manufacturer VARCHAR(100) NOT NULL,
-    unitType varchar(10) NOT NULL, 
-    PRIMARY KEY (part_id)
-);
-
--- CREATE TABLE vendors (
---     vendor_id INT NOT NULL AUTO_INCREMENT,
---     vendorName VARCHAR(255) NOT NULL,
---     PRIMARY KEY (vendor_id)
+-- CREATE TABLE partDefinition (
+--     id INT NOT NULL AUTO_INCREMENT,
+--     partNumber VARCHAR(100) NOT NULL,
+--     partType VARCHAR(50) NOT NULL,
+--     partDescription TEXT NOT NULL,
+--     manufacturer VARCHAR(100) NOT NULL, 
+--     PRIMARY KEY (id)
 -- );
 
-CREATE TABLE partEntry (
-    partEntry_id INT NOT NULL AUTO_INCREMENT,
-    orderType VARCHAR(100) NOT NULL,
-    orderNumber VARCHAR(50) NOT NULL,
-    vendor VARCHAR(255) NOT NULL,
-    -- FOREIGN KEY fk_vendor(vendor_id),
-    -- REFERENCES vendors(vendor_id),
-    project VARCHAR(50) NOT NULL,
-    -- partNumberEntry VARCHAR(100) NOT NULL,
-    quantity INT NOT NULL,
-    conforming boolean NOT NULL,
-    room VARCHAR(20) NOT NULL,
-    cabinet VARCHAR(20) NOT NULL,
-    bin VARCHAR(20) NOT NULL,
-    package INT NOT NULL AUTO_INCREMENT,
-    added DATE NOT NULL,
-    addedBy VARCHAR NOT NULL,
-    FOREIGN KEY fk_part(part_id),
-    REFERENCES partDefinition(part_id),
-    PRIMARY KEY (partEntry_id)
-);
--- erd
+-- CREATE TABLE vendors (
+--     id INT NOT NULL AUTO_INCREMENT,
+--     vendorName VARCHAR(100) NOT NULL,
+--     PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE partEntry (
+--     id INT NOT NULL AUTO_INCREMENT,
+--     part id fk from part description,
+--     quantity INT NOT NULL,
+--     conforming boolean NOT NULL,
+--     cabinet VARCHAR(20) NOT NULL,
+--     order id fk for the order because there are other part entries on this order
+--     -- FOREIGN KEY fk_part(part_id),
+--     -- REFERENCES partDefinition(part_id),
+--     PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE order (
+--     id INT NOT NULL AUTO_INCREMENT,
+--     orderType VARCHAR(100) NOT NULL,
+--     orderNumber VARCHAR(50) NOT NULL,
+--     project VARCHAR(50) NOT NULL,
+--     -- vendor fk_vendor id from vendor table,
+--     -- FOREIGN KEY fk_vendor(vendor_id),
+--     -- REFERENCES vendors(vendor_id),
+--     -- part entries join part entry where ordr id = this id
+-- )

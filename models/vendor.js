@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var vendor = sequelize.define("vendor", {
+    var Vendor = sequelize.define("vendor", {
       vendorName: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -8,5 +8,11 @@ module.exports = function(sequelize, DataTypes) {
         }
     }
     });
-    return vendor;
+
+    Vendor.associate = models => {
+      Vendor.hasMany(models.Order, {
+        foreignKey: "vendorId"
+      });
+    };
+    return Vendor;
   };
