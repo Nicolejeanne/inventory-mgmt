@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { NavLink, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Add from "../../pages/AddParts/index";
 import Get from "../../pages/GetParts/index";
 import BOMs from "../../pages/BOMs/index";

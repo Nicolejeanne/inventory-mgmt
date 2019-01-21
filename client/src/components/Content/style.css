@@ -1,9 +1,9 @@
 .content {
   box-sizing: border-box;
-  background-color: #444444;
+  background-color: #000000;
   /* float: left; */
   width: 75%;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   margin-left: 22%;
   display: inline-block;
   vertical-align: top;

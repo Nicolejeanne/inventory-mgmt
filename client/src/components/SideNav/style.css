@@ -1,19 +1,19 @@
 .sidenav {
-  height: 100%; /* 100% Full-height */
+  height: 1000px; /* 100% Full-height */
   width: 20%; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
   /* z-index: 50; Stay under top nav */
   top: 50px; /* Stay at the top */
   /* left: 0; */
   background-color: #444444 !important;
-  /* overflow-x: hidden; Disable horizontal scroll */
-  padding-top: 10px; /* Place content 60px from the top */
+  /* overflow-y: hidden; Disable horizontal scroll */
+  padding-top: 10px; /* Place content 10px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   /* float: left; */
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 /* The navigation menu links */

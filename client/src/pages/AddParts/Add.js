@@ -4,105 +4,113 @@ import Jumbotron from "../../components/Jumbotron/index";
 import DeleteBtn from "../../components/DeleteBtn/index";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, FormBtn, Dropdown, Table } from "../../components/Form";
 
 class Add extends Component {
   // Setting our component's initial state
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    parts: [],
+    orderType: "",
+    orderNumber: "",
+    vendor: "",
+    project: "",
   };
 
   // When the component mounts, load all books and save them to this.state.books
   componentDidMount() {
-    this.loadBooks();
+    // this.loadBooks();
   }
 
   // Loads all books  and sets them to this.state.books
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-      )
-      .catch(err => console.log(err));
-  };
+  // loadBooks = () => {
+  //   API.getBooks()
+  //     .then(res =>
+  //       this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   // Deletes a book from the database with a given id, then reloads books from the db
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
+  // deleteBook = id => {
+  //   API.deleteBook(id)
+  //     .then(res => this.loadBooks())
+  //     .catch(err => console.log(err));
+  // };
 
   // Handles updating component state when the user types into the input field
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+  // handleInputChange = event => {
+  //   const { name, value } = event.target;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // };
 
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
-      })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-    }
-  };
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.title && this.state.author) {
+  //     API.saveBook({
+  //       title: this.state.title,
+  //       author: this.state.author,
+  //       synopsis: this.state.synopsis
+  //     })
+  //       .then(res => this.loadBooks())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
 
   render() {
     return (
+      <div>
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Part Entry Form</h1>
             </Jumbotron>
-            <form>
-              <Input
-                value={this.state.title}
+            <form style={{paddingLeft:10}}>
+            <Dropdown
+                value={this.state.orderType}
                 onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="orderType"
+                placeholder="Order Type (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.state.orderNumber}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="orderNumber"
+                placeholder="Order Number (required)"
               />
-              <TextArea
+              <Input
+                value={this.state.vendor}
+                onChange={this.handleInputChange}
+                name="vendor"
+                placeholder="Vendor (required)"
+              />
+              <Dropdown
+                value={this.state.project}
+                onChange={this.handleInputChange}
+                name="project"
+                placeholder="Owning Project (required)"
+              />
+              {/* <TextArea
                 value={this.state.synopsis}
                 onChange={this.handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
+              /> */}
             </form>
+            
           </Col>
 
-          <Col size="md-6 sm-12">
+          <Col size="md-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Enter Parts Here</h1>
             </Jumbotron>
-
-            {this.state.books.length ? (
+<Table/>
               
-              <List>
+              {/* <List>
                 {this.state.books.map(book => {
                   return (
                     <ListItem key={book._id}>
@@ -118,10 +126,19 @@ class Add extends Component {
               </List>
             ) : (
               <h3>No Results to Display</h3>
-            )}
+            )} */}
           </Col>
+          
         </Row>
-      </Container>
+
+</Container>
+      <FormBtn
+      disabled={!(this.state.orderType && this.state.orderNumber && this.state.vendor && this.state.project)}
+      onClick={this.handleFormSubmit}
+    >
+      Submit
+    </FormBtn>
+    </div>
     );
   }
 }

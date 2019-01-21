@@ -1,13 +1,6 @@
 import React from "react";
 import "./style.css";
-import { NavLink, Route } from "react-router-dom";
-import Add from "../../pages/AddParts/index";
-import Get from "../../pages/GetParts/index";
-import BOMs from "../../pages/BOMs/index";
-import Kits from "../../pages/PartsKits/index";
-import Search from "../../pages/StockSearch/index";
-import Transactions from "../../pages/Transactions/index";
-
+import { NavLink } from "react-router-dom";
 
 class SideNav extends React.Component {
   render() {
