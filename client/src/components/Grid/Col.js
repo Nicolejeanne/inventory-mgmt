@@ -9,7 +9,7 @@ export function Col({ size, children }) {
         .split(" ")
         .map(size => "col-" + size)
         .join(" ")}
-        style={{border:"#ADADAD", borderWidth:2, borderStyle:"solid", marginTop:25, paddingRight:0, paddingLeft:0}}
+        style={{border:"#ADADAD", borderWidth:.25, borderStyle:"solid", marginTop:25, paddingRight:0, paddingLeft:0}}
     >
       {children}
     </div>

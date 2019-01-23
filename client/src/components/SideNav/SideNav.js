@@ -11,22 +11,22 @@ class SideNav extends React.Component {
         <div className="user"><strong>Logged in: </strong>username</div>
         </div>
         <div className="sideNavBlock">
-        <NavLink exact to="/add"><i className="fas fa-plus fa-nav-icon"/>
+        <NavLink activeStyle={{ color: 'white' }} exact to="/add"><i className="fas fa-plus fa-nav-icon"/>
 						Add Parts
 					</NavLink>
-          <NavLink exact to="/get"><i className="fas fa-hand-paper fa-nav-icon"/>
+          <NavLink activeStyle={{ color: 'white' }} exact to="/get"><i className="fas fa-hand-paper fa-nav-icon"/>
 						Get Parts
 					</NavLink>
-          <NavLink exact to="/bom"><i className="fas fa-table fa-nav-icon"/>
+          <NavLink activeStyle={{ color: 'white' }} exact to="/bom"><i className="fas fa-table fa-nav-icon"/>
 						BOMs
 					</NavLink>
-          <NavLink exact to="/kits"><i className="fas fa-suitcase fa-nav-icon"/>
+          <NavLink activeStyle={{ color: 'white' }} exact to="/kits"><i className="fas fa-suitcase fa-nav-icon"/>
 						Parts Kits
 					</NavLink>
-          <NavLink exact to="/search"><i className="fas fa-search fa-nav-icon"/>
+          <NavLink activeStyle={{ color: 'white' }} exact to="/search"><i className="fas fa-search fa-nav-icon"/>
 						Stock Search
 					</NavLink>
-          <NavLink exact to="/transactions"><i className="fas fa-folder-open fa-nav-icon"/>
+          <NavLink activeStyle={{ color: 'white' }} exact to="/transactions"><i className="fas fa-folder-open fa-nav-icon"/>
 						Transactions
 					</NavLink>
       </div>

@@ -2,9 +2,9 @@
   box-sizing: border-box;
   background-color: #000000;
   /* float: left; */
-  width: 75%;
+  width: 80%;
   /* margin-top: 2%; */
-  margin-left: 22%;
+  margin-left: 240px;
   display: inline-block;
   vertical-align: top;
 }

@@ -3,7 +3,7 @@ import Jumbotron from "../../components/Jumbotron/index";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, FormBtn, Dropdown, Table } from "../../components/Form";
 
 class BOMs extends Component {
   // Setting our component's initial state
@@ -55,9 +55,16 @@ class BOMs extends Component {
 
   render() {
     return (
-            <Jumbotron>
-              <h1>No Bill Of Materials to Show</h1>
-            </Jumbotron>
+      <Container fluid>
+      <Row>
+        <Col size="md-12">
+          <Jumbotron>
+            <h1>Bill of Materials (BOMs)</h1>
+          </Jumbotron>
+          <h3 style={{color:"#ebebeb", paddingLeft: 10}}>No BOMs to Display</h3>
+        </Col>
+        </Row>
+        </Container>
     )
   }
 }
