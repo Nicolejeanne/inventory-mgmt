@@ -1,0 +1,9 @@
+.tableHeader {
+  background-color: #ebebeb;
+  color: black;
+  border: 2px black solid;
+  text-align: center;
+}
+tbody {
+  color: #ebebeb;
+}

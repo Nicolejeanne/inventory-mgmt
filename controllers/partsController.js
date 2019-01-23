@@ -1,11 +1,11 @@
 const db = require("../models");
 
-// Defining methods for the booksController
+// Defining methods for the partsController
 module.exports = function (app) {
 
 
   // findAll: function(req, res) {
-  //   db.Book
+  //   db.PartEntry
   //     .find(req.query)
   //     .sort({ date: -1 })
   //     .then(dbModel => res.json(dbModel))
@@ -28,7 +28,7 @@ module.exports = function (app) {
   //     .findOneAndUpdate({ _id: req.params.id }, req.body)
   //     .then(dbModel => res.json(dbModel))
   //     .catch(err => res.status(422).json(err));
-  // },
+  // }
   // remove: function(req, res) {
   //   db.Book
   //     .findById({ _id: req.params.id })
