@@ -69,6 +69,12 @@ PHASE THREE
 ![Search Parts Wireframe](./client/public/images/newSearchParts.png?raw=true)
 ![Search Parts Results Wireframe](./client/public/images/newSearchResults.png?raw=true)
 
+## Database ERD
+
+This is the basic intended database setup.
+
+![Database ER Diagram](./client/public/image/DatabaseERDiagram.png?raw=true)
+
 ## App Flow
 
 This is the basic intended flow off the app.
