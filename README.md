@@ -71,7 +71,7 @@ PHASE THREE
 
 This is the basic intended database setup.
 
-![Database ER Diagram](./client/public/image/DatabaseERDiagram.png?raw=true)
+![Database ER Diagram](./client/public/images/DatabaseERDiagram.png?raw=true)
 
 ## App Flow
 
