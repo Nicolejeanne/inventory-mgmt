@@ -1,0 +1,70 @@
+.sidenav {
+  height: 1000px; /* 100% Full-height */
+  width: 220px; /* 0 width - change this with JavaScript */
+  position: absolute; /* Stay in place */
+  /* z-index: 50; Stay under top nav */
+  top: 50px; /* Stay at the top */
+  /* left: 0; */
+  background-color: #444444 !important;
+  /* overflow-y: hidden; Disable horizontal scroll */
+  padding-top: 10px; /* Place content 10px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  /* float: left; */
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  /* overflow: auto; */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 15px 8px 15px 18px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* When you select a navigation link, change the color */
+.sidenav a:active {
+  background-color: #008db1;
+}
+/* styling for user icon */
+.fa-user {
+  color: black;
+  margin: 10px auto;
+  display: block;
+  width: 50%;
+  font-size: 40px;
+  text-align: center;
+}
+/* styling for user info in sidebar*/
+.user {
+  color: rgb(173, 173, 173);
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.wholeUser {
+  margin: 0 auto;
+  /* border: 2px solid rgba(255, 255, 255, 0.3); */
+  width: 80%;
+  padding: 10px;
+}
+.sideNavBlock {
+  background-color: #008db1;
+  width: 80%;
+  margin: 10px auto;
+  height: 80%;
+  padding-top: 10px;
+  box-shadow: 5px black;
+}
+.fa-nav-icon {
+  margin-right: 10px;
+}

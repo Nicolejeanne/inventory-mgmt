@@ -1,0 +1,13 @@
+.reportbug-btn {
+  position: absolute;
+  right: 115px;
+  /* top: 10px; */
+  background-color: #00c8f8;
+  color: black;
+  border: black;
+  font-weight: 500;
+  font-size: 12px;
+  /* box-shadow: 0px 5px #006e8c; */
+  padding: 5px 20px;
+  margin: auto;
+}

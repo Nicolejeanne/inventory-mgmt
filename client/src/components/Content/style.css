@@ -1,0 +1,10 @@
+.content {
+  box-sizing: border-box;
+  background-color: #000000;
+  /* float: left; */
+  width: 80%;
+  /* margin-top: 2%; */
+  margin-left: 240px;
+  display: inline-block;
+  vertical-align: top;
+}

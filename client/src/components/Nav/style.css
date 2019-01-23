@@ -1,7 +1,9 @@
 .bg-primary {
   background-color: #444444 !important;
+  height: 50px;
+  border: 2px solid black;
 }
-.fas {
+.fa-warehouse {
   margin-right: 10px;
   color: #008db1;
 }

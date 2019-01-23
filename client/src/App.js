@@ -1,14 +1,19 @@
 import React from "react";
-import Books from "./pages/Books";
 import Nav from "./components/Nav";
+import SideNav from "./components/SideNav";
+import Content from "./components/Content";
 
-function App() {
-  return (
-    <div>
-      <Nav />
-      <Books />
-    </div>
-  );
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Nav />
+        <SideNav />
+        <Content />
+      </div>
+    );
+  }
 }
 
 export default App;
