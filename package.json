@@ -24,7 +24,10 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
+    "namor": "^1.1.1",
+    "react": "^16.7.0",
     "react-sidebar": "^3.0.2",
-    "react-sidemenu": "^1.0.4"
+    "react-sidemenu": "^1.0.4",
+    "react-table": "^6.8.6"
   }
 }

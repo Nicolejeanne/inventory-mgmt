@@ -1,6 +1,7 @@
 // Sets up the Express App, react router
 const express = require("express");
 const routes = require("./routes");
+const mysql = require("mysql");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -12,6 +13,18 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// Make connection to database
+const connection = mysql.createConnection({
+  host: 'localhost',
+  username:'root,',
+  port: 3306,
+  password: 'password',
+  database: 'parts'
+});
+connection.connect(function(err){
+  (err)? console.log(err): console.log(connection);
+});
+
 // Add routes, both API and view
 app.use(routes);
 

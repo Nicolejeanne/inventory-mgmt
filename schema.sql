@@ -1,6 +1,6 @@
-CREATE DATABASE partsInventory_db;
+CREATE DATABASE parts;
 
-USE partsInventory_db;
+USE parts;
 
 -- CREATE TABLE partDefinition (
 --     id INT NOT NULL AUTO_INCREMENT,
