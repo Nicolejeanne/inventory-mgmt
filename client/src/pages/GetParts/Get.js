@@ -1,27 +1,16 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Jumbotron from "../../components/Jumbotron/index";
-import DeleteBtn from "../../components/DeleteBtn/index";
+// import DeleteBtn from "../../components/DeleteBtn/index";
 import { Col, Row, Container } from "../../components/Grid";
-import {
-  Input,
-  TextArea,
-  FormBtn,
-  Dropdown,
-  Table
-} from "../../components/Form";
-import makeData from "../../utils/getUtils";
-import _ from "lodash";
-// Import React Table
+// import _ from "lodash";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 
 
 class Get extends Component {
   // Setting our component's initial state
-  constructor() {
-    super();
-    this.state = {
+    state = {
         parts: [],
         partNumber: "",
         partType: "",
@@ -32,9 +21,9 @@ class Get extends Component {
         conforming: "",
         cabinet: "",
         project: ""
-      }
+      };
       // data: makeData()
-    };
+    
   
 
   // When the component mounts, load all parts and save them to this.state.parts
@@ -46,8 +35,9 @@ class Get extends Component {
   loadParts = () =>{
     API.getParts()
       .then(res =>
-        this.setState({ parts: res.data, partNumber: "", partType: "", description: "", manufacturer: "", vendor: "", quantity: "", conforming: "", cabinet: "", project: "" })
+        this.setState({ parts: res.data })
       )
+      // , partNumber: "", partType: "", description: "", manufacturer: "", vendor: "", quantity: "", conforming: "", cabinet: "", project: ""
       .catch(err => console.log(err));
   };
 

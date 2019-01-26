@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron/index";
 import NewSearchBtn from "../../components/NewSearchBtn/index";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn, Dropdown, Table } from "../../components/Form";
+import { Input, FormBtn, Dropdown } from "../../components/Form";
 
 class Transactions extends Component {
   // Setting our component's initial state

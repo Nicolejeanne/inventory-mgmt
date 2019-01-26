@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/parts");
   },
   // Gets parts with the given id
-  getParts: function(id) {
+  getPart: function(id) {
     return axios.get("/api/parts/" + id);
   },
   // // Deletes parts with the given id

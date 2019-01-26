@@ -15,7 +15,7 @@ partType: {
     }
 },
 partDescription: {
-    type: DataTypes.TEXT,
+    type: Datatypes.TEXT,
     allowNull: false,
 },
 manufacturer: {
@@ -26,11 +26,7 @@ manufacturer: {
     }
 }
 });
-PartDefinition.associate = models => {
-    PartDefinition.hasMany(models.PartEntry, {
-        foreignKey: 'partDefinitionId'
-    })
-}
+
 
 return PartDefinition;
 };

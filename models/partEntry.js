@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     conforming: {
-      type: DataTypes.boolean,
+      type: DataTypes.BOOLEAN,
       allowNull: false
     },
     cabinet: {
@@ -21,13 +21,14 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  PartEntry.associate = models => {
-    PartEntry.belongsTo(models.Order, {
-      foreignKey: "orderId"
-    });
-    PartEntry.hasOne(models.PartDefinition, {
-      foreignKey: "partDefinitionId"
-    });
-  };
+  // PartEntry.associate = models => {
+  //   PartEntry.belongsTo(models.Order, {as:"order", foreignKey: "orderID"});
+      
+  //   PartEntry.belongsTo(models.PartDefinition, {as:"partdef", foreignKey: "partDefinitionID"});
+      
+  //   PartEntry.belongsTo(models.Vendor, {as:"vendor", foreignKey: "vendorID"});
+      
+  //   };
+ 
   return PartEntry;
 };

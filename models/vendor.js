@@ -9,10 +9,5 @@ module.exports = function(sequelize, DataTypes) {
     }
     });
 
-    Vendor.associate = models => {
-      Vendor.hasMany(models.Order, {
-        foreignKey: "vendorId"
-      });
-    };
     return Vendor;
   };

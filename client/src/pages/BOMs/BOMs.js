@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron/index";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn, Dropdown, Table } from "../../components/Form";
 
 class BOMs extends Component {
   // Setting our component's initial state

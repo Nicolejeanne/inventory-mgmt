@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(sequelize, DataTypes) {
   var Order = sequelize.define("Order", {
     orderType: {
@@ -20,16 +22,25 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 50]
       }
-    }
+    },
+    // createdAt: {
+    //   allowNull: false,
+    //   type: DataTypes.DATE,
+    //  default: now()
+    // }, 
+    // updatedAt: {
+    //   allowNull: false,
+    //   type: DataTypes.DATE,
+    //  default: now()
+    // } 
   });
 
-  Order.associate = models => {
-    Order.hasMany(models.PartEntry, {
-      foreignKey: "orderId"
-    });
-    Order.hasOne(models.Vendor, {
-      foreignKey: "vendorId"
-    });
-  };
+  // Order.associate = models => {
+  //   Order.belongsTo(models.Vendor, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   })
+  // };
   return Order;
 };
