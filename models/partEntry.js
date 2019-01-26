@@ -21,14 +21,12 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  // PartEntry.associate = models => {
-  //   PartEntry.belongsTo(models.Order, {as:"order", foreignKey: "orderID"});
+  PartEntry.associate = function(models) {
+    PartEntry.belongsTo(models.Order, {as:"order", foreignKey: "orderID"});
       
-  //   PartEntry.belongsTo(models.PartDefinition, {as:"partdef", foreignKey: "partDefinitionID"});
+    PartEntry.belongsTo(models.PartDefinition, {as:"partdef", foreignKey: "partsDefinitionID"});
       
-  //   PartEntry.belongsTo(models.Vendor, {as:"vendor", foreignKey: "vendorID"});
-      
-  //   };
+    };
  
   return PartEntry;
 };

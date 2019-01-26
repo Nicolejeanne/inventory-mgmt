@@ -1,25 +1,25 @@
-module.exports = function (sequelize, Datatypes) {
+module.exports = function (sequelize, DataTypes) {
     var PartDefinition = sequelize.define("PartDefinition", {
 partNumber: {
-    type: Datatypes.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     validate: {
         len: [1, 100]
     }
 },
 partType: {
-    type: Datatypes.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     validate: {
         len: [1, 50]
     }
 },
 partDescription: {
-    type: Datatypes.TEXT,
+    type: DataTypes.TEXT,
     allowNull: false,
 },
 manufacturer: {
-    type: Datatypes.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     validate: {
         len: [1, 100]
