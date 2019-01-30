@@ -2,11 +2,15 @@ import React, { Component } from "react";
 // import API from "../../utils/API";
 import Jumbotron from "../../components/Jumbotron/index";
 import { Col, Row, Container } from "../../components/Grid";
+// import makeData from "../../utils/addUtils";
+// import DeleteBtn from "../../components/DeleteBtn/index";
+import ReactTable from "react-table";
+import "react-table/react-table.css";
 import {
   Input,
   FormBtn,
   Dropdown,
-  Table
+  StageBtn
 } from "../../components/Form";
 
 class Add extends Component {
@@ -64,6 +68,7 @@ class Add extends Component {
   // };
 
   render() {
+    const { data } = this.state;
     return (
       <div>
         <Container fluid>
@@ -71,64 +76,136 @@ class Add extends Component {
             <Col size="md-12">
               <Jumbotron>
                 <h1>Part Entry Form</h1>
+        
               </Jumbotron>
-              <form style={{ paddingLeft: 10 }}>
-                <Dropdown
+              <Container>
+          <Row>
+            <Col size="md-6">
+              <form style={{ paddingLeft: 10, width: 500 }}>
+                <Input
                   value={this.state.orderType}
                   onChange={this.handleInputChange}
                   name="orderType"
-                  placeholder="Order Type (required)"
+                  placeholder="Order Type"
                 />
                 <Input
                   value={this.state.orderNumber}
                   onChange={this.handleInputChange}
                   name="orderNumber"
-                  placeholder="Order Number (required)"
+                  placeholder="Order Number"
                 />
                 <Input
                   value={this.state.vendor}
                   onChange={this.handleInputChange}
                   name="vendor"
-                  placeholder="Vendor (required)"
+                  placeholder="Vendor"
                 />
-                <Dropdown
+                <Input
                   value={this.state.project}
                   onChange={this.handleInputChange}
                   name="project"
-                  placeholder="Owning Project (required)"
+                  placeholder="Owning Project"
                 />
-                {/* <TextArea
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              /> */}
+                </form>
+                </Col>
+         
+            <Col size="md-6">
+                <form style={{ paddingLeft: 10}}>
+                <Input
+                  value={this.state.partNumber}
+                  onChange={this.handleInputChange}
+                  name="partNumber"
+                  placeholder="Part Number"
+                />
+                <Input
+                  value={this.state.quantity}
+                  onChange={this.handleInputChange}
+                  name="quantity"
+                  placeholder="Quantity"
+                />
+                <Input
+                  value={this.state.conforming}
+                  onChange={this.handleInputChange}
+                  name="conforming"
+                  placeholder="Conforming"
+                />
+                <Input
+                  value={this.state.cabinet}
+                  onChange={this.handleInputChange}
+                  name="cabinet"
+                  placeholder="Cabinet"
+                />
               </form>
+              </Col>
+          </Row>
+        </Container>
+        
+              <StageBtn
+          disabled={
+            !(
+              this.state.orderType &&
+              this.state.orderNumber &&
+              this.state.vendor &&
+              this.state.project
+            )
+          }
+          onClick={this.handleStagePart}
+        >
+          Stage Part Now!
+        </StageBtn> 
             </Col>
+            
 
             <Col size="md-12">
               <Jumbotron>
-                <h1>Enter Parts Here</h1>
+                <h1>Parts to Check-In</h1>
               </Jumbotron>
-              <Table />
-
-              {/* <List>
-                {this.state.books.map(book => {
-                  return (
-                    <ListItem key={book._id}>
-                      <a href={"/books/" + book._id}>
-                        <strong>
-                          {book.title} by {book.author}
-                        </strong>
-                      </a>
-                      <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                    </ListItem>
-                  );
-                })}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )} */}
+        <ReactTable
+        style={{ color: "#ebebeb" }}
+        // filterable
+        //   defaultFilterMethod={(filter, row) =>
+        //     String(row[filter.id]) === filter.value}
+          // data={data}
+          
+          columns={[
+            {
+              Header: "Part Number",
+              accessor: "partNumber"
+            },
+            {
+              Header: "Part Type",
+              accessor: "partType"
+            },
+            {
+              Header: "Description",
+              accessor: "description"
+            },
+            {
+              Header: "Manufacturer",
+              accessor: "manufacturer"
+            },
+            {
+              Header: "Quantity",
+              accessor: "quantity"
+            },
+            {
+              Header: "Conforming?",
+              accessor: "conforming"
+            },
+            {
+              Header: "Cabinet",
+              accessor: "cabinet"
+            },
+            {
+              Header: "Remove",
+      
+              accessor: "remove"
+            }
+              ]}
+            
+          defaultPageSize={10}
+          className="-striped -highlight"
+        />
             </Col>
           </Row>
         </Container>
