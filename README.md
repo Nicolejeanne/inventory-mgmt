@@ -21,8 +21,8 @@ My department at my current job uses a web-based inventory management system to 
 - Bootstrap
 - Javascript
 - Moment.js
-- Temporarily deployed with Heroku
 - NPM
+- ReactTables
 - Moqups
 
 ## Project Organization
