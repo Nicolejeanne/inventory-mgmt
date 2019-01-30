@@ -11,17 +11,17 @@ class Transactions extends Component {
 
   // When the component mounts, load all books and save them to this.state.books
   componentDidMount() {
-    this.loadTransactions();
+    // this.loadTransactions();
   }
 
   // Loads all books and sets them to this.state.books
-  loadTransactions = () => {
-    // API.getBooks()
-    //   .then(res =>
-    //     this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-    //   )
-    //   .catch(err => console.log(err));
-  };
+  // loadTransactions = () => {
+  //   // API.getBooks()
+  //   //   .then(res =>
+  //   //     this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+  //   //   )
+  //   //   .catch(err => console.log(err));
+  // };
 
   // // Deletes a book from the database with a given id, then reloads books from the db
   // deleteBook = id => {

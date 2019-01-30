@@ -8,49 +8,49 @@ import _ from "lodash";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 
-const rawData = makeData();
+// const rawData = makeData();
 
-const requestData = (pageSize, page, sorted, filtered) => {
-  return new Promise((resolve, reject) => {
-    // You can retrieve your data however you want, in this case, we will just use some local data.
-    let filteredData = rawData;
+// const requestData = (pageSize, page, sorted, filtered) => {
+//   return new Promise((resolve, reject) => {
+//     // You can retrieve your data however you want, in this case, we will just use some local data.
+//     let filteredData = rawData;
 
-    // You can use the filters in your request, but you are responsible for applying them.
-    if (filtered.length) {
-      filteredData = filtered.reduce((filteredSoFar, nextFilter) => {
-        return filteredSoFar.filter(row => {
-          return (row[nextFilter.id] + "").includes(nextFilter.value);
-        });
-      }, filteredData);
-    }
-    // You can also use the sorting in your request, but again, you are responsible for applying it.
-    const sortedData = _.orderBy(
-      filteredData,
-      sorted.map(sort => {
-        return row => {
-          if (row[sort.id] === null || row[sort.id] === undefined) {
-            return -Infinity;
-          }
-          return typeof row[sort.id] === "string"
-            ? row[sort.id].toLowerCase()
-            : row[sort.id];
-        };
-      }),
-      sorted.map(d => (d.desc ? "desc" : "asc"))
-    );
+//     // You can use the filters in your request, but you are responsible for applying them.
+//     if (filtered.length) {
+//       filteredData = filtered.reduce((filteredSoFar, nextFilter) => {
+//         return filteredSoFar.filter(row => {
+//           return (row[nextFilter.id] + "").includes(nextFilter.value);
+//         });
+//       }, filteredData);
+//     }
+//     // You can also use the sorting in your request, but again, you are responsible for applying it.
+//     const sortedData = _.orderBy(
+//       filteredData,
+//       sorted.map(sort => {
+//         return row => {
+//           if (row[sort.id] === null || row[sort.id] === undefined) {
+//             return -Infinity;
+//           }
+//           return typeof row[sort.id] === "string"
+//             ? row[sort.id].toLowerCase()
+//             : row[sort.id];
+//         };
+//       }),
+//       sorted.map(d => (d.desc ? "desc" : "asc"))
+//     );
 
-    // You must return an object containing the rows of the current page, and optionally the total pages number.
-    const res = {
-      rows: sortedData.slice(pageSize * page, pageSize * page + pageSize),
-      pages: Math.ceil(filteredData.length / pageSize)
-    };
+//     // You must return an object containing the rows of the current page, and optionally the total pages number.
+//     const res = {
+//       rows: sortedData.slice(pageSize * page, pageSize * page + pageSize),
+//       pages: Math.ceil(filteredData.length / pageSize)
+//     };
 
-//     // Here we'll simulate a server response with 500ms of delay.
-//     setTimeout(() => resolve(res), 500);
-//   });
-// };
-})
-}
+// //     // Here we'll simulate a server response with 500ms of delay.
+// //     setTimeout(() => resolve(res), 500);
+// //   });
+// // };
+// })
+// }
 
 class Get extends Component {
   // Setting our component's initial state
@@ -94,30 +94,30 @@ class Get extends Component {
 
   // When the component mounts, load all parts and save them to this.state.parts
   componentDidMount() {
-    this.loadParts();
+    // this.loadParts();
   }
 
-  // Loads all parts and sets them to this.state.parts
-  loadParts = () =>{
-    API.getParts()
-      .then(res =>
-        this.setState({ parts: res.data })
-      )
-      // , partNumber: "", partType: "", description: "", manufacturer: "", vendor: "", quantity: "", conforming: "", cabinet: "", project: ""
-      .catch(err => console.log(err));
-  };
+//   // Loads all parts and sets them to this.state.parts
+//   loadParts = () =>{
+//     API.getParts()
+//       .then(res =>
+//         this.setState({ parts: res.data })
+//       )
+//       // , partNumber: "", partType: "", description: "", manufacturer: "", vendor: "", quantity: "", conforming: "", cabinet: "", project: ""
+//       .catch(err => console.log(err));
+//   };
 
-  // ----------------------------------------
-  // something for updating parts
-  // ----------------------------------------
+//   // ----------------------------------------
+//   // something for updating parts
+//   // ----------------------------------------
 
-// Handles updating component state when the user types into the input field
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+// // Handles updating component state when the user types into the input field
+//   handleInputChange = event => {
+//     const { name, value } = event.target;
+//     this.setState({
+//       [name]: value
+//     });
+//   };
 
   // When the form is submitted, use the API.saveParts method to save the book data
   // Then reload books from the database

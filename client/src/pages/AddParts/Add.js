@@ -76,7 +76,7 @@ class Add extends Component {
             <Col size="md-12">
               <Jumbotron>
                 <h1>Part Entry Form</h1>
-        
+                
               </Jumbotron>
               <Container>
           <Row>
